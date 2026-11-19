@@ -6,18 +6,19 @@ import Footer from "./components/Footer"
 import Testimonials from "./components/Testimonials"
 import bgImage from "./assets/Background_Image.jpg"
 import BackgroundSlideShow from "./components/BackgroundSlideShow"
+import About from "./components/About"
 
 function App() {
   return (
     <div className="min-h-screen text-slate-900" >
         <BackgroundSlideShow />
         <NavBar></NavBar>
-        <Logo></Logo>
+        <About></About>
         <Features></Features>
         <Pricing></Pricing>
         <Testimonials></Testimonials>
         <Footer></Footer>
-        <h1 className="text-4xl">@2026 Copyright</h1>
+        <h1 className="text-xs">@2026 Copyright </h1>
     </div>
   );
 }
