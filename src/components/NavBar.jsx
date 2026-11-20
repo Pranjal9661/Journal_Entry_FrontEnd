@@ -25,9 +25,7 @@ export default function NavBar(){
   </ul>
   <div className="flex items-center gap-2 px-2 py-1 border-2 border-slate-900 rounded-full">
      <Link to="/login" className="px-4 py-1.5 font-medium text-slate-900 hover:text-indigo-600">Login</Link>
-     <a href="#" className="px-4 py-1.5 font-medium rounded-full bg-slate-900 text-white hover:bg-indigo-600">
-       Register
-     </a>
+     <Link to="/register" className="px-4 py-1.5 font-medium rounded-full bg-slate-900 text-white hover:bg-indigo-600">Register</Link>
   </div>
 </nav>
 );

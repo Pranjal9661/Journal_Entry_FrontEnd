@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Login() {
     const [userName, setUserName] = useState("");
@@ -100,9 +101,9 @@ export default function Login() {
         </form>
         <p className="mt-6 text-center text-sm text-slate-500">
             Don't have an account?{" "}
-            <a href="#" className="text-indigo-600 font-medium hover:underline">
-                Register
-            </a>
+           <Link to="/register" className="text-indigo-600 font-medium hover:underline">
+            Register
+           </Link>
         </p>
 
         </div>
