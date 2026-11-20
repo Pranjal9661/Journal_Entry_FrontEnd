@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { FaCartArrowDown } from "react-icons/fa";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 
 
@@ -23,9 +24,7 @@ export default function NavBar(){
     <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Contact</a></li>
   </ul>
   <div className="flex items-center gap-2 px-2 py-1 border-2 border-slate-900 rounded-full">
-     <a href="#" className="px-4 py-1.5 font-medium text-slate-900 hover:text-indigo-600">
-        Login
-      </a>
+     <Link to="/login" className="px-4 py-1.5 font-medium text-slate-900 hover:text-indigo-600">Login</Link>
      <a href="#" className="px-4 py-1.5 font-medium rounded-full bg-slate-900 text-white hover:bg-indigo-600">
        Register
      </a>
