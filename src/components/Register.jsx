@@ -39,14 +39,12 @@ const handleSubmit = (e) => {
      navigate("/login");
 };
 
-const fieldBox = 
-"flex items-center gap--3 px-4 py-3 border -border-slate-300 rounded-xl focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200";
 return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 bg-yellow-50" >
-    <div className="w-full max-w-md bh-white rounded-3xl shadow-xl p-8">
+    <div className="min-h-screen flex items-center justify-center px-4 py-10 bg-yellow-50" >
+    <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
     <div className="text-center mb-8">
     <h1 className="text-3xl font-bold text-slate-900">
-    Create Your <span className="text-indigo-600">account</span>
+    Create your <span className="text-indigo-600">account</span>
     </h1>
     <p className="mt-2 text-slate-500">
         Start your Journal Entry today.
@@ -59,7 +57,8 @@ return (
         <label htmlFor="userName" className="block mb-1 text-sm font-medium text-slate-700">
             Username        
         </label>
-     <div className="{fieldBox}">
+     <div className="flex items-center gap-3 px-4 py-3 border border-slate-300 rounded-xl focus-within:border-indigo-500 
+     focus-within:ring-2 focus-within:ring-indigo-200">
       <FaUser className="text-slate-400" />
       <input 
       id="userName"
@@ -77,7 +76,8 @@ return (
        <label htmlFor="userEmail" className="block mb-1 text-sm font-medium text-slate-700">
        Email
        </label>
-       <div className="{fieldBox}">
+       <div className="flex items-center gap-3 px-4 py-3 border border-slate-300 rounded-xl focus-within:border-indigo-500 
+     focus-within:ring-2 focus-within:ring-indigo-200">
         <FaEnvelope className="text-slate-400" />
         <input 
         id="userEmail"
@@ -96,7 +96,8 @@ return (
         <label htmlFor="userPassword" className="block mb-1 text-sm font-medium text-slate-700">
         Password
         </label>
-        <div className="{fieldBox}">
+        <div className="flex items-center gap-3 px-4 py-3 border border-slate-300 rounded-xl focus-within:border-indigo-500 
+     focus-within:ring-2 focus-within:ring-indigo-200">
         <FaLock className="text-slate-400" />
         <input 
         id="userPassword"
@@ -122,7 +123,8 @@ return (
       <label htmlFor="confirmPassword" className="block mb-1 text-sm font-medium text-slate-700">
        Confirm password
       </label>
-      <div className="{fieldBox}" >
+      <div className="flex items-center gap-3 px-4 py-3 border border-slate-300 rounded-xl focus-within:border-indigo-500 
+     focus-within:ring-2 focus-within:ring-indigo-200" >
       <FaLock className="text-slate-400" />
       <input 
        id="confirmPassword"

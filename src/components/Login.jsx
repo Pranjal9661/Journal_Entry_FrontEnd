@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Login() {
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
-    const [showPassword, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState("");
     const [error, setError] = useState("");
     
 
@@ -27,7 +27,7 @@ export default function Login() {
 
     return (
         <div className="min-h-screen flex items-center justify-center px-4 bg-yellow-50">
-        <div className="w-full max-w-md bh-white rounded-3xl shadow-xl p-8">
+        <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
         <div className="test-center mb-8">
         <h1 className="text-3xl font-bold text-slate-900">
             Welcome <span className="text-indigo-600">back</span>        

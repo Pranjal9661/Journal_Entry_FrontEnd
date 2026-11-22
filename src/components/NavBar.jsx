@@ -17,9 +17,9 @@ export default function NavBar(){
     </a>
   </div>
   <ul className="flex gap-10">
-    <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Home</a></li>
+    <li><Link to="/" className="font-medium text-slate-700 hover:text-indigo-500">Home</Link></li>
     <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Services</a></li>
-    <li><a href="#about" className="font-medium text-slate-700 hover:text-indigo-500">About</a></li>
+    <li><Link to="#about" className="font-medium text-slate-700 hover:text-indigo-500">About</Link></li>
     <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Pricing</a></li>
     <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Contact</a></li>
   </ul>
