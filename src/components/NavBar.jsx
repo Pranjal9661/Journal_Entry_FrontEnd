@@ -6,7 +6,7 @@ import { FaCartArrowDown } from "react-icons/fa";
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
-
+const linkStyle ="px-5 py-2 rounded-full font-medium text-slate-900 transition hover:bg-indigo-600 hover:text-white"
 
 export default function NavBar(){
     return (
@@ -16,12 +16,12 @@ export default function NavBar(){
     <img src={logo} alt="Journal Entry" className="h-12" />
     </a>
   </div>
-  <ul className="flex gap-10">
-    <li><Link to="/" className="font-medium text-slate-700 hover:text-indigo-500">Home</Link></li>
-    <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Services</a></li>
-    <li><Link to="#about" className="font-medium text-slate-700 hover:text-indigo-500">About</Link></li>
-    <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Pricing</a></li>
-    <li><a href="#" className="font-medium text-slate-700 hover:text-indigo-500">Contact</a></li>
+  <ul className="flex gap-2">
+    <li><Link to="/"  className={linkStyle}>Home</Link></li>
+    <li><Link to="/#services" className={linkStyle}>Services</Link></li>
+    <li><Link to="/#about"  className={linkStyle}>About</Link></li>
+    <li><Link href="/#pricing"  className={linkStyle}>Pricing</Link></li>
+    <li><Link href="/#contact"  className={linkStyle}>Contact</Link></li>
   </ul>
   <div className="flex items-center gap-2 px-2 py-1 border-2 border-slate-900 rounded-full">
      <Link to="/login" className="px-4 py-1.5 font-medium text-slate-900 hover:text-indigo-600">Login</Link>
