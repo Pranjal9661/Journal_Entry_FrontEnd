@@ -12,6 +12,7 @@ import { useEffect } from "react"
 import {Routes,Route,useLocation} from "react-router-dom"
 import Register from "./components/Register"
 import Services from "./components/Services"
+import Journal from "./components/Journal"
 
 function Home(){
   return(
@@ -51,6 +52,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
+           <Route path="/journal" element={<Journal/>}></Route>
          </Routes>
         <Footer></Footer>
         <h1 className="text-xs">@2026 Copyright </h1>

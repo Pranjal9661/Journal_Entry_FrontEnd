@@ -13,6 +13,7 @@ const services = [
     icon: <FaBookOpen/>,
     title: "Daily Journaling",
     text: "Write your thoughts in a clean, distraction-free editor, any time of the day.",
+    to: "/journal"
 },
 {
     icon: <FaSmile/>,
@@ -31,8 +32,8 @@ const services = [
 },
 {
     icon: <FaShieldAlt />,
-    title: "Search a Tags",
-    text: "Find any past entry quickly by keyword, date, or tag.",
+    title: "Private & Secure",
+    text: "Yours entries stay yours.Nothing is shared unless you decide to.",
 },
 {
     icon: <FaShareAlt/>,
@@ -51,21 +52,27 @@ export default function Services() {
                 <p className="mt-4 text-slate-600 text-center max-w-2xl mx-auto">
                     Everything you need to write regularly, reflect honestly, and keep your memories safe.
                 </p>
-                <div className="mt-12 grid gap-6 sm:grid-cola-2 lg:grid-cola-3">
-                    {services.map((s) => (
-                        <div key={s.title}
-                        className="p-6 rounded-2xl bg-yellow-100/80 hover:bg-yellow-200 hover:-translate-y-1 hover:shadow-md transition">
-                        <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-yellow-300 text-xl">
-                         {s.icon}
-                        </div>
-                        <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                        {s.title}    
-                        </h3>
-                        <p className="mt-2 text-sm text-slate-600 loading-relaxed">
-                         {s.text}    
-                        </p>         
-                      </div>
-                    ))}
+                <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {services.map((s) => {
+                        const Card = s.to ? Link: "div";
+                        return (
+                            <Card 
+                            key={s.title}
+                            {...(s.to ? { to: s.to } : {})}
+                            className="block p-6 rounded-2xl bg-yellow-100/80 hover:bg-yellow-200 hover:-translate-y-1 hover:shadow-md transition">
+                            
+                            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-yellow-300 text-xl">
+                                {s.icon}
+                            </div>
+                            <h3 className="mt-4 text-lg font-semibold text-slate-900">
+                                {s.title}
+                            </h3>
+                            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                                {s.text}
+                            </p>
+                            </Card>
+                        );
+                    })}
                 </div>
                 <div className="mt-12 text-center">
                     <Link to="/register" className="inline-block px-8 py-3 rounded-full bg-slate-900 text-white font-semibold hover:bg-indigo-600 transition">
